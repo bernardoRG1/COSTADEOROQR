@@ -1,0 +1,231 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 700px;
+    margin: auto;
+    background: #FFFFFF;
+}
+
+/* footer */
+
+header h1 {
+    font-size: 3.4rem;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+header {
+    max-width: 100%;
+    width: 100vw;
+    text-align: center;
+}
+
+header nav li:last-child > a {
+    border-bottom: none;
+}
+
+
+
+.header-logo img {
+    margin: 100px auto;
+    width: 60%;
+}
+
+header nav {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #003C51;
+}
+
+header nav li {
+    list-style: none;  
+    width: 100%;
+}
+
+header nav li a{
+    display: inline-block;
+    width: 100%;
+    padding: 15px 10px;
+    border-bottom: 2px solid #D2AA62;
+    list-style: none;
+    font-size: 2.4rem;
+    text-decoration: none;
+    color: #003C51;
+
+}
+.titulo {
+    margin-top: 120px;
+    font-size: 4rem;
+}
+
+
+.directorio-elemento {
+    margin-top: 60px;
+}
+
+.elemento-titulo {
+    font-size: 2.4rem;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #D2AA62;
+}
+
+
+
+
+.italic {
+    font-style: italic;
+}
+
+
+.elemento-lista {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    
+
+}
+
+.elemento-lista span {
+    min-width: 100px;
+    align-self: self-start;
+}
+.elemento-lista p {
+    margin-right: 5px;
+}
+
+
+
+.lista-elemento {
+    display: grid;
+
+    grid-auto-rows: auto;
+    gap: 10px;
+}
+
+.canales-contenedor {
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2.4rem;
+
+}
+
+
+.canales-contenedor > div {
+    width: 50%;
+}
+
+
+.canales-contenedor > div:first-child {
+    border-right: 3px solid #D2AA62;
+}
+
+
+.canales-contenedor > div:last-child {
+    padding-left: 60px;
+}
+
+
+.television-elemento {
+
+    width: 100%;
+}
+
+.elemento-icon {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;   
+    margin-bottom: 30px;
+}
+
+
+.elemento-icon .icon {
+    display: inline-block;
+    height: 100px;
+    width: 80px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.elemento-icon .television-icon {
+    background-image: url('../images/control.svg');
+}
+
+.elemento-icon .internet-icon {
+    background-image: url('../images/wifi.svg');
+}
+
+
+.elemento-icon .reloj-icon {
+    background-image: url('../images/reloj.svg');
+}
+
+
+.border {
+
+    height: 100%;
+    width: calc(100% - 120px);
+    border-bottom: 2px solid #D2AA62;
+}
+
+.television-elemento p, .internet-elemento p, .reloj-elemento p {
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    max-width: 700px;
+    width: 100%;
+    height: 10vh;
+    display: inline-block;
+
+    position: fixed;
+    bottom: 0;
+    background: #E8E8E1;
+    border-bottom: 10px solid #C2BEAF;
+}
+
+footer .first {
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+}
+
+
+footer .first a {
+    color: #003C51;
+}
+
+

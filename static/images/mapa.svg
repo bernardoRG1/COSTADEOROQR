@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 182.41 45.86">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #003c51;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        fill: #003c51;
+        font-family: ACaslonPro-SemiboldItalic, 'ACaslonPro SemiboldItalic';
+        font-size: 35px;
+        font-style: italic;
+        font-weight: 600;
+      }
+
+      .cls-3 {
+        letter-spacing: -.03em;
+      }
+    </style>
+  </defs>
+  <g id="Capa_1-2" data-name="Capa 1">
+    <g>
+      <text class="cls-2" transform="translate(0 37.11)"><tspan class="cls-3" x="0" y="0">V</tspan><tspan x="18.38" y="0">er mapa</tspan></text>
+      <g>
+        <g>
+          <path class="cls-1" d="M160.49,24.84c.29.24.72.24,1.01,0,1.99-1.67,9.18-8.16,9.18-14.36,0-5.23-4.34-9.47-9.69-9.47s-9.69,4.24-9.69,9.47c0,6.2,7.2,12.69,9.18,14.36Z"/>
+          <circle class="cls-1" cx="160.99" cy="10.3" r="5.04"/>
+        </g>
+        <polyline class="cls-1" points="172.5 14.91 175.69 16.36 181.03 42.41 171.01 37.74 160.99 42.41 150.97 37.74 140.95 42.41 146.3 16.36 149.48 14.91"/>
+        <line class="cls-1" x1="160.99" y1="42.41" x2="160.99" y2="27.72"/>
+        <line class="cls-1" x1="152.81" y1="20.73" x2="150.97" y2="37.74"/>
+        <line class="cls-1" x1="171.01" y1="37.74" x2="169.18" y2="20.73"/>
+      </g>
+    </g>
+  </g>
+</svg>
