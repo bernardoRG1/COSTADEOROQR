@@ -12,6 +12,10 @@
     font-weight: bold;
 }
 
+html {
+    scroll-behavior:auto;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -20,41 +24,41 @@
 
 body {
     max-width: 700px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1), /* Sombra sutil alrededor */
+                0px 10px 30px rgba(0, 0, 0, 0.1); /* Sombra más profunda */
     margin: auto;
+    border-radius: 10px;
     background: #FFFFFF;
+}
+
+main {
+    overflow-x: hidden;
 }
 
 /* footer */
 
-header, #directorio-seccion {
-    height: 100vh;
-    max-height: 100vh;
+#directorio-seccion {
+    width: 80%;
+    margin: auto;
 }
 #directorio-seccion .elemento-titulo {
     font-weight: bold;
+
 }
 #canales-seccion {
-
-    max-height: 200vh;
-    height: 200vh;
+    width: 80%;
+    margin: auto;
 }
 
 
 #horarios-seccion {
-    max-height: 150vh;
-    height: 150vh;
+    width: 80%;
+    margin: auto;
 }
 
 #restaurantes {
-    height: 300vh;
-    max-height: 300vh;
-}
-header h1 {
-    color: #003C51;
-    font-size: 3.4rem;
-    margin-top: 10px;
-    margin-bottom: 40px;
-    font-family: "Adobe Caslon Pro Font";
+    width: 80%;
+    margin: auto;
 }
 
 .bold {
@@ -64,23 +68,31 @@ header h1 {
 header {
     max-width: 100%;
     width: 100vw;
+    height: 100vh;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+header h1 {
+    color: #003C51;
+    font-size: 3.4rem;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-family: "Adobe Caslon Pro Font";
 }
 
-header nav li:last-child > a {
-    border-bottom: none;
-}
 
 
 
 .header-logo img {
-    margin: 100px auto;
-    width: 60%;
+    margin: 20px auto;
+    width: 50%;
 }
 
 header nav {
-    width: 70%;
-    margin: auto;
+
+    width: 80%;
+    margin: 0px auto 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,39 +102,54 @@ header nav {
 }
 
 header nav li {
+
     list-style: none;  
     width: 100%;
 }
+
+header nav li:last-child > a {
+    border-bottom: none;
+}
+
 
 header nav li a{
     font-family: "Adobe Caslon Pro Font";
     display: inline-block;
     width: 100%;
-    padding: 15px 10px;
+    padding: 5px 10px;
     border-bottom: 2px solid #D2AA62;
     list-style: none;
-    font-size: 2.4rem;
+    font-size: 1.8rem;
     text-decoration: none;
     color: #003C51;
 
 }
+
 .titulo {
     color: #003C51;
     font-family: "Adobe Caslon Pro Font";
     margin-top: 120px;
-    font-size: 4rem;
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
 
 .directorio-elemento {
-    margin-top: 60px;
+    margin-top: 20px;
+
 }
 
+
+
+
 .elemento-titulo {
+    display: flex;
+    justify-content: space-between;
     color: #003C51;
     font-family: "Adobe Caslon Pro Font";
     font-weight: normal;
-    font-size: 2.4rem;
+    font-size: 1.7rem;
     padding-bottom: 5px;
     border-bottom: 2px solid #D2AA62;
     margin-bottom: 15px;
@@ -133,7 +160,7 @@ header nav li a{
     display: inline-block;
     position: relative;
     top: -30px;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
 }
 
 
@@ -142,10 +169,10 @@ header nav li a{
 }
 
 
-.elemento-lista {
+.elemento-lista, .concierge-elemento p, .estadio p {
     color: #003C51;
     font-family: "Adobe Caslon Pro Font";
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     display: flex;
     align-items: center;
     
@@ -153,7 +180,7 @@ header nav li a{
 }
 
 .elemento-lista span {
-    min-width: 100px;
+    min-width: 70px;
     align-self: self-start;
 }
 .elemento-lista p {
@@ -177,7 +204,7 @@ header nav li a{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    font-size: 2.4rem;
+    font-size: 1.59rem;
 
 }
 
@@ -195,7 +222,7 @@ header nav li a{
 
 
 .canales-contenedor > div:last-child {
-    padding-left: 60px;
+    padding-left: 15px;
 }
 
 
@@ -239,8 +266,13 @@ header nav li a{
     top: 10px;
     background-image: url('../images/reloj.svg');
 }
+.restaurantes-elemento div picture img {
+    max-width: 90vw;
+}
 
-
+#restaurantes .desc {
+    font-size: 1.8rem;
+}
 .border {
 
     height: 100%;
@@ -253,7 +285,7 @@ header nav li a{
 .television-elemento .lista-desc p, .internet-elemento .lista-desc p, .reloj-elemento .lista-desc p {
     color: #003C51;
     font-family: "Adobe Caslon Pro Font";
-    font-size: 2rem;
+    font-size: 1.7rem;
     
     
 }
@@ -294,14 +326,19 @@ header nav li a{
     margin-top: 70px;
 }
 
+#mapa {
+    width: 80%;
+    margin: auto;
+}
+
 #mapa .titulo {
     line-height: 60px;
-    padding-bottom: 70px;
+    padding-bottom: 30px;
 }
 
 
 .mapa-desc {
-    font-size: 2.4rem;
+    font-size: 1.6rem;
 
 }
 
@@ -312,11 +349,10 @@ header nav li a{
     width: 90%;
 }
 .mapa-titulo {
-    width: 75%;
     color: white;
     padding: 6px 12px;
     margin: 60px 0 20px;
-    font-size: 2.4rem;
+    font-size: 1.1rem;
 
 }
 
@@ -325,12 +361,13 @@ header nav li a{
 }
 .link span {
     display: inline-block;
-    width: 130px;
+    width: 80px;
     height: 100px;
     background-image: url("../images/mapa.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position:bottom;
+
 }
 
 
@@ -364,33 +401,58 @@ header nav li a{
   }
   
   .mapa-contenedor {
-    width: 1400px; /* Ancho del mapa */
-    margin: 0 auto;
+
+    width: 100%; /* Ancho del mapa */
     overflow-x: auto; /* Permite el desplazamiento horizontal */
   }
   
   .mapa-contenedor img {
-    width: 100%; /* Asegura que la imagen ocupe el ancho total del contenedor */
+    width: 1400px; /* Asegura que la imagen ocupe el ancho total del contenedor */
     display: block; /* Elimina cualquier espacio blanco adicional alrededor de la imagen */
   }
   
+#concierge {
+    width: 90%;
+    margin: auto;
+}
+
+.vista {
+    display: inline-block   ;
+    padding-bottom: 100px;
+
+}
+
+
+.vista .elemento-titulo {
+    font-weight: bold;
+}
 
 /* footer */
+footer.hidden {
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    will-change: transform, opacity;
+}
+
+footer.visible {
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
 
 footer {
     max-width: 700px;
     width: 100%;
-    height: 10vh;
     display: inline-block;
 
     position: fixed;
     bottom: 0;
-    background: #E8E8E1;
-    border-bottom: 10px solid #C2BEAF;
 }
 
 footer .first {
-    width: 90vw;
+
+    background: #DDDBCF;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -398,6 +460,36 @@ footer .first {
 }
 
 
-footer .first a {
+.first-cont {
+    padding: 10px 0;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.8rem;
+}
+.first-cont a {
+    display: flex;
+    align-items: center;
     color: #003C51;
+    text-decoration: none;
+}
+
+.first-cont  a span {
+    display: inline-block;
+    width: 18px; /* Ancho del cuadrado */
+    height: 18px; /* Altura del cuadrado */
+    border-width: 3px 3px 0 0; /* Bordes superiores y derechos para crear la flecha */
+    border-style: solid;
+    border-color: #003C51; /* Color de la flecha */
+    transform: rotate(-135deg); /* Gira el cuadrado para formar una flecha */
+    margin-right: 8px; /* Espacio entre la flecha y el texto */
+}
+
+.last {
+    width: 100%;
+    height: 20px;
+    background: #C2BEAF;
+    border-bottom: 10px solid #9C8A74;
 }
