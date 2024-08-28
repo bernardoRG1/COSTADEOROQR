@@ -1,3 +1,17 @@
+
+@font-face {
+    font-family: "Adobe Caslon Pro Font";
+    src: url(/static/fonts/ACaslonPro-Regular.otf);
+    font-weight: normal;
+}
+
+
+@font-face {
+    font-family: "Adobe Caslon Pro Font";
+    src: url(/static/fonts/ACaslonPro-bold.ttf);
+    font-weight: bold;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -12,10 +26,35 @@ body {
 
 /* footer */
 
+header, #directorio-seccion {
+    height: 100vh;
+    max-height: 100vh;
+}
+#directorio-seccion .elemento-titulo {
+    font-weight: bold;
+}
+#canales-seccion {
+
+    max-height: 200vh;
+    height: 200vh;
+}
+
+
+#horarios-seccion {
+    max-height: 150vh;
+    height: 150vh;
+}
+
+#restaurantes {
+    height: 300vh;
+    max-height: 300vh;
+}
 header h1 {
+    color: #003C51;
     font-size: 3.4rem;
     margin-top: 10px;
     margin-bottom: 40px;
+    font-family: "Adobe Caslon Pro Font";
 }
 
 .bold {
@@ -56,6 +95,7 @@ header nav li {
 }
 
 header nav li a{
+    font-family: "Adobe Caslon Pro Font";
     display: inline-block;
     width: 100%;
     padding: 15px 10px;
@@ -67,6 +107,8 @@ header nav li a{
 
 }
 .titulo {
+    color: #003C51;
+    font-family: "Adobe Caslon Pro Font";
     margin-top: 120px;
     font-size: 4rem;
 }
@@ -77,12 +119,22 @@ header nav li a{
 }
 
 .elemento-titulo {
+    color: #003C51;
+    font-family: "Adobe Caslon Pro Font";
+    font-weight: normal;
     font-size: 2.4rem;
-    padding-bottom: 10px;
-    border-bottom: 3px solid #D2AA62;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #D2AA62;
+    margin-bottom: 15px;
 }
 
 
+.segunda-linea {
+    display: inline-block;
+    position: relative;
+    top: -30px;
+    font-size: 2.5rem;
+}
 
 
 .italic {
@@ -91,6 +143,8 @@ header nav li a{
 
 
 .elemento-lista {
+    color: #003C51;
+    font-family: "Adobe Caslon Pro Font";
     font-size: 1.8rem;
     display: flex;
     align-items: center;
@@ -103,6 +157,8 @@ header nav li a{
     align-self: self-start;
 }
 .elemento-lista p {
+    color: #003C51;
+    font-family: "Adobe Caslon Pro Font";
     margin-right: 5px;
 }
 
@@ -116,6 +172,7 @@ header nav li a{
 }
 
 .canales-contenedor {
+
     padding-top: 20px;
     width: 100%;
     display: flex;
@@ -127,11 +184,13 @@ header nav li a{
 
 .canales-contenedor > div {
     width: 50%;
+    font-family: "Adobe Caslon Pro Font";
+    color: #003C51;
 }
 
 
 .canales-contenedor > div:first-child {
-    border-right: 3px solid #D2AA62;
+    border-right: 2px solid #D2AA62;
 }
 
 
@@ -169,11 +228,15 @@ header nav li a{
 }
 
 .elemento-icon .internet-icon {
+    position: relative;
+    top: 20px;
     background-image: url('../images/wifi.svg');
 }
 
 
 .elemento-icon .reloj-icon {
+    position: relative;
+    top: 10px;
     background-image: url('../images/reloj.svg');
 }
 
@@ -184,24 +247,135 @@ header nav li a{
     width: calc(100% - 120px);
     border-bottom: 2px solid #D2AA62;
 }
-
-.television-elemento p, .internet-elemento p, .reloj-elemento p {
+.lista-desc {
+    padding: 10px 0;
+}
+.television-elemento .lista-desc p, .internet-elemento .lista-desc p, .reloj-elemento .lista-desc p {
+    color: #003C51;
+    font-family: "Adobe Caslon Pro Font";
     font-size: 2rem;
+    
+    
+}
+
+.reloj-elemento  .lista-desc p {
+    color: #003C51;
+    padding-bottom: 10px;
+}
+
+
+.restaurantes-elemento .elemento-titulo {
+    margin: 20px 0 50px;
+    padding-bottom: 15px;
+
+}
+
+.restaurantes-elemento div .desc{
+    margin: 40px 0;
+    color: #003C51;
+    font-size: 2.4rem;
+
+
+}
+
+
+.lagos {
+    margin-top: 70px;
+}
+
+
+.lagos:last-child  picture img {
+    position: relative;
+    left: -10px;
+    width: 85%;
+}
+
+.barra {
+    margin-top: 70px;
+}
+
+#mapa .titulo {
+    line-height: 60px;
+    padding-bottom: 70px;
+}
+
+
+.mapa-desc {
+    font-size: 2.4rem;
+
+}
+
+.mapa-linea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+.mapa-titulo {
+    width: 75%;
+    color: white;
+    padding: 6px 12px;
+    margin: 60px 0 20px;
+    font-size: 2.4rem;
+
+}
+
+.link {
+    margin-bottom: 20px;
+}
+.link span {
+    display: inline-block;
+    width: 130px;
+    height: 100px;
+    background-image: url("../images/mapa.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:bottom;
 }
 
 
 
+.habitaciones-titulo {
+    background: #D28C4E;
+}
+
+.salones-titulo {
+    background: #509BC6;
+}
+
+.servicios-titulo {
+    background: #407C50;
+}
+
+.bar-titulo {
+    background: #CC524A;
+}
+
+.oficinas-titulo {
+    background: #E1CA5A;
+}
 
 
 
+#mapa {
+    max-width: 700px; /* Para mantener el diseño dentro del ancho máximo de 700px */
+    margin: 0 auto;
+    overflow-x: hidden; /* Evita que el contenido dentro del contenedor se desplace accidentalmente */
+  }
+  
+  .mapa-contenedor {
+    width: 1400px; /* Ancho del mapa */
+    margin: 0 auto;
+    overflow-x: auto; /* Permite el desplazamiento horizontal */
+  }
+  
+  .mapa-contenedor img {
+    width: 100%; /* Asegura que la imagen ocupe el ancho total del contenedor */
+    display: block; /* Elimina cualquier espacio blanco adicional alrededor de la imagen */
+  }
+  
 
-
-
-
-
-
-
-
+/* footer */
 
 footer {
     max-width: 700px;
@@ -227,5 +401,3 @@ footer .first {
 footer .first a {
     color: #003C51;
 }
-
-
