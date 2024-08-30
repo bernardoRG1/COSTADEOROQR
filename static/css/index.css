@@ -192,13 +192,13 @@ header nav li a{
 }
 
 
-.elemento-lista, .concierge-elemento p, .estadio p {
+.elemento-lista, .concierge-elemento a, .estadio a {
     color: #003C51;
     font-family: "Adobe Caslon Pro Font";
     font-size: 1.6rem;
     display: flex;
     align-items: center;
-  
+    text-decoration: none;
     
 
 }
@@ -207,7 +207,7 @@ header nav li a{
     margin-top: 20px;
 }
 
-.estadio .elemento-titulo {
+.concierge-elemento .elemento-titulo {
     margin-top: 20px;
     display: flex;
     width: 100%;
@@ -224,7 +224,57 @@ header nav li a{
     font-family: "Adobe Caslon Pro Font";
     margin-right: 5px;
 }
+ 
 
+
+
+/* Estilos del acordeón */
+.tab {
+    position: relative;
+    margin-bottom: 1px;
+    width: 100%;
+    color: #003C51;
+    overflow: hidden;
+    font-size: 1.6rem;
+ }
+ 
+ .tab input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+ }
+ 
+ .tab label {
+    position: relative;
+    display: block;
+    font-weight: normal;
+    cursor: pointer;
+ }
+
+
+ 
+ .tab-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s ease, opacity .5s ease;
+ }
+ 
+ .tab-content picture img {
+    display: block;
+    width: 100%;
+ }
+ 
+ /* Estilo del acordeón cuando el input está marcado */
+ .tab input:checked ~ .tab-content {
+    max-height: 100vh; /* Ajusta según el contenido */
+    opacity: 1;
+ }
+ 
+ .concierge .tab .elemento-titulo {
+    padding: 0;
+    margin: 0;
+    top: 0;
+ }
 
 
 .lista-elemento {

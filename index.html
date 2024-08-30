@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./static/css/index.css">
-
+    <link rel="stylesheet" href="./static/css/concierge.css">
     <script type="module" src="./static/js/footer.js"></script>
     <script type="module" src="./static/js/scroll.js"></script>
     <title>Costa de oro</title>
@@ -12,9 +12,9 @@
 <body>
     <header class="hero" id="hero">
         <div class="lenguage-cont">
-            <span>
-                <img src="./static/images/USA.svg" width="40px" alt="">
-            </span>
+            <a href="-/en/index.html">
+                <img src="./static/images/USA.svg" width="40px" alt="USA FLAG">
+            </a>
         </div>
         <picture class="header-logo">
             <img src="./static/images/LOGO.webp" alt="costa de oro">
@@ -413,46 +413,62 @@
             <img class="mapa-imagen" src="./static/images/mapa2.webp" alt="">
         </div>
         <section id="concierge">
-            <p class="titulo"> Servicio de concierge <br>
-                y venta de paseos
-                                </p>
-            <div class="concierge-elemento" id="concierge-elemento">
-                <p class="elemento-titulo bold">
-                    Amenidades, atractivos y servicios.
-                </p>
-                <p>Malecón</p>
-                <p>Isla Venados</p>
-                <p>Marina</p>
-                <p>Gran Plaza</p>
-                <p>Galerías Mazatlán</p>
-                <p>Central de Autobuses</p>
-
-            </div>
-
-
-            <div class="estadio">
-                <div class="elemento-titulo bold">
-                    <span class="bold">Estadio Béisbol </span>
-                    <a href=""><img src="./static/images/googlemaps.webp" style="position: relative; bottom: -3px; right: -40px;" width="60%" alt="gooogle maps icon"></a>
+            <p class="titulo">Servicio de concierge <br> y venta de paseos</p>
+        
+            <div class="concierge-elemento">
+                <div class="tab">
+                    <input id="tab-one" type="checkbox" name="tabs">
+                    <label for="tab-one">
+                        <div class="elemento-titulo" >
+                            <p  style="font-weight: bold;">Gran Acuario Mazatlán</p>
+                            <span class="arrow"></span>
+                            <a href="#" class="mapa-link"><img src="./static/images/googlemaps.webp" width="90px" style="position: relative; left: -10px;" alt="google maps link"></a>
+                        </div>
+                    </label>
+                    <div class="tab-content">
+                        <picture>
+                            <img src="./static/images/ACUARIO.webp" alt="Gran Acuario Mazatlán">
+                        </picture>
+                    </div>
                 </div>
-                <picture>
-                    <img src="./static/images/Estadio.jpg" width="100%" alt="estadio">
-                </picture>
-                <p class="first-line">Gran Acuario Mazatlán</p>
-                <p>Centro histórico y catedral</p>
-                <p>Faro</p>
-                <p>Hotel Costa de Oro</p>
-            </div>
 
+                
+                <div class="tab">
+                    <input id="tab-two" type="checkbox" name="tabs">
+                    <label for="tab-two" >
+                        <div class="elemento-titulo" >
+                            <p  style="font-weight: bold;">Malecon</p>
+                            <span class="arrow"></span>
+                            <a href="#" class="mapa-link"><img src="./static/images/googlemaps.webp" width="90px" style="position: relative; left: -10px;" alt="google maps link"></a>
+                        </div>
+                    </label>
+                    <div class="tab-content">
+                        <picture> 
+                            <img src="./static/images/MALECON.webp" alt="Malecón">
+                        </picture>
+                    </div>
+                </div>
+                <div class="tab">
+                    <input id="tab-three" type="checkbox" name="tabs">
+                    <label for="tab-three"><p class="elemento-titulo">Isla Venados</p></label>
+                    <div class="tab-content">
+                        <picture>
+                            <img src="./static/images/ISLAVENADOS.webp" alt="Isla Venados">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        
             <div class="vista">
-                <p class="elemento-titulo bold">
-                    Vista rápida del mapa
-                </p>
+                <p class="elemento-titulo bold">Vista rápida del mapa</p>
                 <picture>
                     <img src="./static/images/mapa.webp" width="100%" alt="segundo mapa">
                 </picture>
             </div>
         </section>
+        
+        
+        
     </main>
 
     <footer class="hidden">
@@ -467,13 +483,5 @@
         <div class="last"></div>
     </footer>
 </body>
-<script>
-    window.addEventListener('load', function() {
-    const mapaContainer = document.querySelector('.mapa-contenedor'); // Selecciona el contenedor, no la imagen
-    const mapWidth = mapaContainer.scrollWidth; // Obtiene el ancho total del contenido
-    const viewportWidth = window.innerWidth; // Obtiene el ancho del viewport
-    mapaContainer.scrollLeft = (mapWidth - viewportWidth) / 2; // Desplaza al centro de la imagen
-});
 
-</script>
 </html> 
