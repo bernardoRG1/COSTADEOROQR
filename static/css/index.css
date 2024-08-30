@@ -71,6 +71,12 @@ main {
     margin: auto;
 }
 
+#nuevo-mapa {
+    width: 80%;
+    margin: auto;
+
+}
+
 .bold {
     font-weight: bold;
 }
@@ -224,11 +230,36 @@ header nav li a{
     font-family: "Adobe Caslon Pro Font";
     margin-right: 5px;
 }
- 
+ /* General styles for map containers */
+.mapa-contenedor {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
 
+/* Show map containers when checkbox is checked */
+.mapa-habitaciones input:checked ~ .mapa-contenedor#show-habitaciones,
+.mapa-salones input:checked ~ .mapa-contenedor#show-salones,
+.mapa-servicios input:checked ~ .mapa-contenedor#show-servicios,
+.mapa-bares input:checked ~ .mapa-contenedor#show-bares,
+.mapa-oficinas input:checked ~ .mapa-contenedor#show-oficinas {
+    max-height: 50vh; /* Adjust based on your content */
+    opacity: 1;
+}
 
+/* Ensuring the accordions are above the rest */
+.mapa-elemento {
+    position: relative;
+    z-index: 2; /* Ensure containers are above other elements */
+}
 
-/* Estilos del acordeón */
+/* Optional: Padding for the section */
+#mapa {
+    padding-bottom: 100px; /* Ensure no overlap when expanded */
+}
+
+/* For accordion tab styles */
 .tab {
     position: relative;
     margin-bottom: 1px;
@@ -236,45 +267,37 @@ header nav li a{
     color: #003C51;
     overflow: hidden;
     font-size: 1.6rem;
- }
- 
- .tab input {
+}
+
+.tab input {
     position: absolute;
     opacity: 0;
     z-index: -1;
- }
- 
- .tab label {
+}
+
+.tab label {
     position: relative;
     display: block;
     font-weight: normal;
     cursor: pointer;
- }
+}
 
-
- 
- .tab-content {
+.tab-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height .5s ease, opacity .5s ease;
- }
- 
- .tab-content picture img {
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.tab-content picture img {
     display: block;
     width: 100%;
- }
- 
- /* Estilo del acordeón cuando el input está marcado */
- .tab input:checked ~ .tab-content {
-    max-height: 100vh; /* Ajusta según el contenido */
+}
+
+.tab input:checked ~ .tab-content {
+    max-height: 100vh; /* Adjust based on your content */
     opacity: 1;
- }
- 
- .concierge .tab .elemento-titulo {
-    padding: 0;
-    margin: 0;
-    top: 0;
- }
+}
+
 
 
 .lista-elemento {
@@ -444,6 +467,18 @@ header nav li a{
 
 }
 
+.link span {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-image: url("../images/mapa.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    cursor: pointer;
+}
+
+
 .link {
     margin-bottom: 20px;
 }
@@ -495,9 +530,14 @@ header nav li a{
   }
   
   .mapa-contenedor img {
-    width: 1400px; /* Asegura que la imagen ocupe el ancho total del contenedor */
-    display: block; /* Elimina cualquier espacio blanco adicional alrededor de la imagen */
+    width: 700px; /* Asegura que la imagen ocupe el ancho total del contenedor */
+   
   }
+
+  .link {
+    margin-bottom: 20px;
+}
+
   
 #concierge {
     width: 90%;
@@ -534,7 +574,8 @@ footer {
     max-width: 700px;
     width: 100%;
     display: inline-block;
-
+    position: absolute ;
+    z-index: 99;
     position: fixed;
     bottom: 0;
 }
