@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./static/css/index.css">
-    <link rel="stylesheet" href="./static/css/concierge.css">
-    <link rel="stylesheet" href="./static/css/mapa.css">
+
     <script type="module" src="./static/js/footer.js"></script>
     <script type="module" src="./static/js/scroll.js"></script>
     <script type="module" src="./static/js/acordeon.js"></script>
+    <script type="module" src="./static/js/mapa.js"></script>
+    <script type="module" src="./static/js/lugares.js"></script>
     <title>Costa de oro</title>
 </head>
 <body>
@@ -464,8 +465,7 @@
                         <div class="elemento-titulo" >
                             <p  style="font-weight: bold;">Gran Acuario Mazatlán</p>
                             <span class="arrow"></span>
-                            <a href="https://g.co/kgs/RhD7NsP" class="mapa-link"><img src="./static/images/googlemaps.webp" width="90px" style="position: relative; left: -10px;" alt="google maps link"></a>
-                        </div>
+                            <a href="https://g.co/kgs/RhD7NsP" class="mapa-link"><img src="../static/images/googlemaps.webp" width="90px" style="position: relative; left: -10px;" alt="google maps link"></a>
                         </div>
                     </label>
                     <div class="tab-content">
@@ -474,6 +474,7 @@
                         </picture>
                     </div>
                 </div>
+
 
                 
                 <div class="tab">
@@ -556,15 +557,14 @@
                     <input id="tab-seven" type="checkbox" name="tabs">
                     <label for="tab-seven" >
                         <div class="elemento-titulo" >
-                            <p  style="font-weight: bold;">Central de autobuses</p>
+                            <p style="font-weight: bold;">Central de autobuses  </p>
                             <span class="arrow"></span>
-                            <a href="https://maps.app.goo.gl/FBjVF7zqV5oS9Fgq8" class="mapa-link"><img src="./static/images/googlemaps.webp" width="90px" style="position: relative; left: -10px;" alt="google maps link"></a>
-                        </div>
+                            <a href="https://maps.app.goo.gl/FBjVF7zqV5oS9Fgq8" class="mapa-link"><img src="../static/images/googlemaps.webp" width="90px" style="position: relative; left: -10px;" alt="google maps link"></a>
                         </div>
                     </label>
                     <div class="tab-content">
                         <picture> 
-                            <img src="./static/images/CENTRAL.webp" alt="CENTRAL">
+                            <img src="../static/images/CENTRAL.webp" alt="CENTRAL">
                         </picture>
                     </div>
                 </div>
@@ -655,19 +655,5 @@
         <div class="last"></div>
     </footer>
 </body>
-<script>
-    document.querySelectorAll('.tab input').forEach((input) => {
-    input.addEventListener('change', function() {
-        if (this.checked) {
-            const tabContent = this.nextElementSibling;
-            const offset = tabContent.getBoundingClientRect().top + window.scrollY - 20; // Ajusta el -100 según el espacio que quieras dejar arriba
-            window.scrollTo({
-                top: offset,
-                behavior: 'smooth' // Desplazamiento suave
-            });
-        }
-    });
-});
 
-</script>
 </html> 

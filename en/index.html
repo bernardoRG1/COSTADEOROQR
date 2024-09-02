@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/index.css">
-    <link rel="stylesheet" href="../static/css/concierge.css">
-    <link rel="stylesheet" href="../static/css/mapa.css">
+
     <script type="module" src="../static/js/footer.js"></script>
     <script type="module" src="../static/js/scroll.js"></script>
     <script type="module" src="../static/js/acordeon.js"></script>
+    <script type="module" src="../static/js/lugares.js"></script>
+    <script type="module" src="../static/js/mapa.js"></script>
     <title>Costa de oro</title>
 </head>
 <body>
@@ -24,11 +25,11 @@
         <h1>Services</h1>
         <nav class="menu">
             <ul>
-                <li><a href="#directory-section">Directory</a></li>
-                <li><a href="#channels-section">Channel List</a></li>
-                <li><a href="#schedules-section">Services and Schedules</a></li>
-                <li><a href="#restaurants" style="font-size: 1.56rem;">Restaurant and Bar Service</a></li>
-                <li><a href="#map">Hotel Map</a></li>
+                <li><a href="#directorio-seccion">Directory</a></li>
+                <li><a href="#canales-seccion">Channel List</a></li>
+                <li><a href="#orarios-seccion">Services and Schedules</a></li>
+                <li><a href="#restaurantes" style="font-size: 1.56rem;">Restaurant and Bar Service</a></li>
+                <li><a href="#mapa">Hotel Map</a></li>
                 <li><a href="#concierge">Concierge Service and Tour Sales</a></li>
             </ul>
         </nav>
@@ -349,7 +350,7 @@
                         
                     </div>
                     <div class="mapa-contenedor" id="show-salones" style="overflow-x: scroll;">
-                        <img class="mapa-imagen" src="./static/images/mapa2.webp" alt="imagen">
+                        <img class="mapa-imagen" src="../static/images/mapa2.webp" alt="imagen">
                     </div>
                 </div>
         
@@ -380,7 +381,7 @@
                         <p style="display: flex; align-items: center; margin-top: 10px;"><img src="../static/images/personas.svg" width="25px" style="margin-right: 10px;" alt="elevador">Bathrooms</p>
                     </div>
                     <div class="mapa-contenedor" id="show-servicios" style="overflow-x: scroll;">
-                        <img class="mapa-imagen" src="./static/images/mapa2.webp" alt="imagen">
+                        <img class="mapa-imagen" src="../static/images/mapa2.webp" alt="imagen">
                     </div>
                 </div>
         
@@ -404,7 +405,7 @@
                         <p>19. Cevichería / Cevichería</p>
                     </div>
                     <div class="mapa-contenedor" id="show-bares" style="overflow-x: scroll;">
-                        <img class="mapa-imagen" src="./static/images/mapa2.webp" alt="imagen">
+                        <img class="mapa-imagen" src="../static/images/mapa2.webp" alt="imagen">
                     </div>
                 </div>
         
@@ -426,7 +427,7 @@
                         <p>23. Reservations / Reservations</p>
                     </div>
                     <div class="mapa-contenedor" id="show-oficinas" style="overflow-x: scroll;">
-                        <img class="mapa-imagen" src="./static/images/mapa2.webp" alt="imagen">
+                        <img class="mapa-imagen" src="../static/images/mapa2.webp" alt="imagen">
                     </div>
                 </div>
             </div>
@@ -643,19 +644,5 @@
         <div class="last"></div>
     </footer>
 </body>
-<script>
-    document.querySelectorAll('.tab input').forEach((input) => {
-    input.addEventListener('change', function() {
-        if (this.checked) {
-            const tabContent = this.nextElementSibling;
-            const offset = tabContent.getBoundingClientRect().top + window.scrollY - 20; // Ajusta el -100 según el espacio que quieras dejar arriba
-            window.scrollTo({
-                top: offset,
-                behavior: 'smooth' // Desplazamiento suave
-            });
-        }
-    });
-});
 
-</script>
 </html> 

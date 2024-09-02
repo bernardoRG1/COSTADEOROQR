@@ -53,6 +53,7 @@ main {
 }
 #directorio-seccion .elemento-titulo {
     font-weight: bold;
+  
 
 }
 #canales-seccion {
@@ -151,6 +152,7 @@ header nav li a{
 }
 
 .titulo {
+    padding-top: 20px;
     color: #003C51;
     font-family: "Adobe Caslon Pro Font";
     margin-top: 120px;
